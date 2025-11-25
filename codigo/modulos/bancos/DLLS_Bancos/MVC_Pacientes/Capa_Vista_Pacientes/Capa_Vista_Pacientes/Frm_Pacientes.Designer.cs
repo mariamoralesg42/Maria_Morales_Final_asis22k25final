@@ -30,6 +30,8 @@ namespace Capa_Vista_Pacientes
         private void InitializeComponent()
         {
             this.navegador1 = new Capa_Vista_Navegador.Navegador();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // navegador1
@@ -44,12 +46,34 @@ namespace Capa_Vista_Pacientes
             this.navegador1.Size = new System.Drawing.Size(1573, 601);
             this.navegador1.SNombreTabla = null;
             this.navegador1.TabIndex = 0;
+            this.navegador1.Load += new System.EventHandler(this.navegador1_Load);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(44, 286);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(143, 83);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "ayuda";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(210, 286);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(143, 83);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "reporte";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // Frm_Pacientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1555, 450);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.navegador1);
             this.Name = "Frm_Pacientes";
             this.Text = "Frm_Pacientes";
@@ -60,5 +84,7 @@ namespace Capa_Vista_Pacientes
         #endregion
 
         private Capa_Vista_Navegador.Navegador navegador1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
